@@ -86,7 +86,7 @@
 
 <div class="success-box">
     <h2>Registration Successful! 🎉</h2>
-    <p class="lead">Welcome, <%= session.getAttribute("userName") %>! You are now logged in.</p>
+    <p class="lead">Welcome, <%= session.getAttribute("username") %>! You are now logged in.</p>
     <a href="dashboard.jsp" class="btn btn-primary mt-3">Go to Dashboard</a>
 </div>
     
