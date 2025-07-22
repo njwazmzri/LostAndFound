@@ -1,7 +1,13 @@
-DATABASE NAME : lostfoundsystem
-USERNAME : app
-PASSWORD : app
+## 🔧 Cara Setup Database untuk Projek
 
+1. Buka tab `Services` di NetBeans
+2. Right-click `Java DB` > `Create Database`
+   - Database Name: lostfoundsystem
+   - Username: app
+   - Password: app
+3. Right-click `lostfoundsystem` > `Execute Command`
+4. Copy & paste dari line 12 - 57
+5. Tekan F6 untuk run semua command
 
 CREATE TABLE USERS (
     ID INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
