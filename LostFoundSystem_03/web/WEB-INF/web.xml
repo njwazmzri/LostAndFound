@@ -10,10 +10,6 @@
         <servlet-class>controller.RegisterServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>ViewItemsServlet</servlet-name>
-        <servlet-class>controller.ViewItemsServlet</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>SubmitLostItemServlet</servlet-name>
         <servlet-class>controller.SubmitLostItemServlet</servlet-class>
     </servlet>
@@ -65,10 +61,6 @@
     <servlet-mapping>
         <servlet-name>RegisterServlet</servlet-name>
         <url-pattern>/RegisterServlet</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>ViewItemsServlet</servlet-name>
-        <url-pattern>/ViewItemsServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>SubmitLostItemServlet</servlet-name>
