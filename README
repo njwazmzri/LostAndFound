@@ -1,57 +1,6 @@
-## 🔧 Cara Setup Database untuk Projek
+## 🔧 How to Run Database
 
-1. Buka tab `Services` di NetBeans
-2. Right-click `Java DB` > `Create Database`
-   - Database Name: lostfoundsystem
-   - Username: app
-   - Password: app
-3. Right-click `lostfoundsystem` > `Execute Command`
-4. Copy & paste dari line 12 - 57
-5. Tekan F6 untuk run semua command
-
-CREATE TABLE USERS (
-    ID INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
-    FULLNAME VARCHAR(100) NOT NULL,
-    EMAIL VARCHAR(100) NOT NULL UNIQUE,
-    PASSWORD VARCHAR(100) NOT NULL
-);
-
-CREATE TABLE LOST_ITEMS (
-    ID INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
-    USER_ID INT,
-    ITEM_NAME VARCHAR(100),
-    CATEGORY VARCHAR(50),
-    DESCRIPTION VARCHAR(255),
-    DATE_LOST DATE,
-    LOCATION_LOST VARCHAR(300), 
-    CONTACT_INFO VARCHAR(255),
-    TRACKING_NUMBER VARCHAR(50),
-    COURIER_SERVICE VARCHAR(100),
-    PARCEL_STATUS VARCHAR(50), 
-    FOREIGN KEY (USER_ID) REFERENCES USERS(ID)
-);
-
-CREATE TABLE FOUND_ITEMS (
-    ID INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
-    USER_ID INT,
-    ITEM_NAME VARCHAR(100),
-    CATEGORY VARCHAR(50),
-    DESCRIPTION VARCHAR(255),
-    DATE_FOUND DATE,
-    LOCATION_FOUND VARCHAR(300), 
-    CONTACT_INFO VARCHAR(255),
-    TRACKING_NUMBER VARCHAR(50),
-    COURIER_SERVICE VARCHAR(100),
-    PARCEL_STATUS VARCHAR(50),  
-    FOREIGN KEY (USER_ID) REFERENCES USERS(ID)
-);
-
-CREATE TABLE FEEDBACK (
-    ID INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
-    USER_ID INT,
-    CUSTOMER_NAME VARCHAR(100),
-    EMAIL VARCHAR(100),
-    RATING INT,           
-    COMMENTS VARCHAR(500),
-    FOREIGN KEY (USER_ID) REFERENCES USERS(ID)
-);
+Import the project into your NetBeans.
+Set up the Derby database by inserting the lostfoundsystem folder into this path "C:\Users<Username>\AppData\Roaming\NetBeans\Derby".
+Clean & Build and run the project.
+Access the application via http://localhost:8080/LostFoundSystem_03/ in your browser.
